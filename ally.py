@@ -35,8 +35,8 @@ def cetak(b):
         j = w.index(i)
         x= x.replace('!%s'%i,'\033[%s;1m'%str(31+j))
     x += '\033[0m'
-    x = x.replace('!0','\033[0m')
-    sys.stdout.write(x+'\n')
+
+
 
 
 def jalan(z):
@@ -118,16 +118,16 @@ def login():
 	os.system('clear')
 	try:
 		toket = open('login.txt','r')
-		menu() 
+
 	except (KeyError,IOError):
 		os.system('clear')
 		print logo
 		print 42*"\033[1;96m="
 		print('\033[1;96m[⚡] \x1b[1;91m───Login your new ID───\x1b[1;93m[⚡]' )
 		id = raw_input('\033[1;93m[+] \x1b[0;34mEnter ID/Email \x1b[1;95m: \x1b[1;95m')
-		pwd = raw_input('\033[1;95m[+] \x1b[0;34mEnter Password \x1b[1;93m: \x1b[1;93m')
-		tik()
-		try:
+		
+
+
 			br.open('https://m.facebook.com')
 		except mechanize.URLError:
 			print"\n\033[1;96m[!] \x1b[1;91mTidak ada koneksi"
